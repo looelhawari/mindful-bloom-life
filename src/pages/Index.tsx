@@ -1,9 +1,10 @@
 
 import React from 'react';
-import Home from './Home';
+import { Navigate } from 'react-router-dom';
 
 const Index = () => {
-  return <Home />;
+  // Directly redirect to dashboard
+  return <Navigate to="/dashboard" replace />;
 };
 
 export default Index;
