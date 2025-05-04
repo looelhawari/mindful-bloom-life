@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom wellness-themed colors
+				wellness: {
+					primary: '#4C956C',    // Soft green for primary actions
+					secondary: '#9B87F5',  // Purple for secondary elements
+					accent: '#F2CB05',     // Accent yellow for highlights
+					light: '#E5DEFF',      // Light purple background
+					dark: '#1A1F2C',       // Dark background
+					success: '#36D399',    // Success green
+					warning: '#FBBD23',    // Warning yellow
+					error: '#F87272',      // Error red
+					info: '#3ABFF8',       // Info blue
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +101,24 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-gentle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-gentle': 'pulse-gentle 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'gradient-wellness': 'linear-gradient(135deg, #9B87F5 0%, #4C956C 100%)',
 			}
 		}
 	},
